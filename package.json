@@ -1,0 +1,19 @@
+{
+  "name": "e-commerce",
+  "version": "1.0.0",
+  "description": "api do e-commerce estudos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoLeandroSousa/e-commerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BrunoLeandroSousa/e-commerce/issues"
+  },
+  "homepage": "https://github.com/BrunoLeandroSousa/e-commerce#readme"
+}
