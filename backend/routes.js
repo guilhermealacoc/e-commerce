@@ -2,20 +2,22 @@ const express = require('express');
 const routes  = express.Router();
 const mongoose = require('mongoose');
 const CreateProduct = require('./controller/product');
+const Order = require('./controller/order');
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useCreateIndex', true);
 
 
 routes.get('/', (req,res)=>{
+    
     console.log("pai ta on");
-
     res.send({
-       'deus': "é fiel" 
+      'deus': "é fiel" 
     })
 })
 
 routes.post('/', CreateProduct.createProduct);
-routes.get('/test', CreateProduct.Messagetest);
+routes.post('/1', Order.CreateOrder);
+
 
 module.exports = routes;
