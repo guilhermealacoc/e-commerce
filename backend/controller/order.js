@@ -1,5 +1,6 @@
+const { find } = require('../model/order');
 const Order = require('../model/order');
-const product = require('../model/product');
+const Product = require('../model/product');
 
 const CreateOrder = {
     CreateOrder(req,res){
@@ -11,7 +12,13 @@ const CreateOrder = {
             }
             res.send(order);
         });
-    }
+    },
+
+   async ListOrder(req, res){
+     const orders = await Order.find().populate('Products');
+
+     return res.send(orders);
+    }   
 }
 
 module.exports = CreateOrder;
