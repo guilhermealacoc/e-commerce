@@ -6,13 +6,12 @@ const CreateProduct = {
         const { _id, Name, Price, Pathimg, Infos, Amount } = req.body;
         const product = new Product({ _id, Name, Price, Pathimg, Infos, Amount});
         
-        product.save((err, product)=>{
+        product.save((err, product) => {
             if(err){
                return res.status(500).send({message: 'erro'})
             }
             res.send(product);
-            console.log('Miguel Gostoso');
-       });
+        });
     }
 
 }
