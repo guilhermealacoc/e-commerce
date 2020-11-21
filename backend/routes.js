@@ -16,9 +16,9 @@ routes.get('/', (req,res)=>{
     })
 })
 
-routes.post('/', CreateProduct.createProduct);
-routes.post('/1', Order.CreateOrder);
-routes.get('/list', Order.ListOrder);
-
+routes.post('/createproduct', CreateProduct.createProduct);
+routes.post('/listproduct', CreateProduct.createProduct);
+routes.post('/createorder', Order.CreateOrder);
+routes.get('/listorder', Order.ListOrder);
 
 module.exports = routes;
